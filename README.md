@@ -131,3 +131,5 @@ Both CSVs have columns `img_id, predicted_label` (class name, not integer).
 - The 13-band stem sets `transform_input=False` on GoogLeNet — omitting this silently drops bands 3–12.
 - Per-band normalization uses training-set statistics (not ImageNet stats); the cached `ms_band_stats.json` must be generated before training or copied from Drive.
 - For the MS DataLoader, set `num_workers=0` when using `rasterio` (multiprocess fork conflicts with the library).
+
+My contribution: GoogLeNet adaptation to 13-band multispectral input, training/eval pipeline, 11-page technical report.
